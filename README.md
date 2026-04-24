@@ -1,4 +1,4 @@
-### RAFM Data Exatraction
+### RAFM Data Extraction
 
 <details>
   <summary>OCS RAFM Data Extraction (Top-Ups Jan–Apr 2026)</summary>
