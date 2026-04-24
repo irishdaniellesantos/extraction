@@ -27,7 +27,7 @@
 </details>
 
 
-### **Process Overview**
+#### **Process Overview**
 
 1. **MIN List Preparation** <br>
    Downloaded the list of MINs and imported it into ROC (`oracle.rocref.temp_min_list`) to be used as a reference table for filtering.
