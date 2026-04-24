@@ -29,10 +29,10 @@
 
 ### **Process Overview**
 
-1. **MIN List Preparation**
+1. **MIN List Preparation** <br>
    Downloaded the list of MINs and imported it into ROC (`oracle.rocref.temp_min_list`) to be used as a reference table for filtering.
 
-2. **Table Validation**
+2. **Table Validation** <br>
    Identified the required source tables:
 
    * `u_oocs_vou`
@@ -41,7 +41,7 @@
 
    Checked each table in Presto to confirm that the requested date range (**Jan 1, 2026 – Apr 16, 2026**) is available.
 
-3. **Field Validation**
+3. **Field Validation** <br>
    Used `DESC <table_name>` to verify that the required fields match the provided file format (`RAFM_VOU_format.xlsx`) and exist in the tables.
 
 4. **Data Extraction Query** <br>
@@ -70,14 +70,14 @@
        ocs_other_party_number;
    ```
 
-6. **Extraction Execution (Default Path)**
+6. **Extraction Execution (Default Path)** <br>
    After validating the query, exited Presto and executed the extraction script:
 
    ```bash
    ./extraction.sh "<QUERY>" "RAFM_TopUpsJanApr"
    ```
 
-7. **Alternative Execution (Custom HDFS Path)**
+7. **Alternative Execution (Custom HDFS Path)** <br>
    If saving to a specific directory, navigated to the target path:
 
    ```bash
@@ -90,7 +90,7 @@
    ~/idhs/extraction.sh "<QUERY>" "RAFM_TopUpsJanApr"
    ```
 
-8. **File Retrieval**
+8. **File Retrieval** <br>
    After the extraction completes:
 
    * Located the output file (tab-delimited `.text` file) in the target directory
