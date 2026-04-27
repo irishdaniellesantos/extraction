@@ -74,7 +74,7 @@
    After validating the query, exited Presto and executed the extraction script:
 
    ```bash
-   ./extraction.sh "<QUERY>" "RAFM_TopUpsJanApr"
+   ./extraction.sh "<QUERY>" "RAFM_TopUpsJanApr_vou"
    ```
 
 7. **Alternative Execution (Custom HDFS Path)** <br>
@@ -87,10 +87,15 @@
    Then executed the script using:
 
    ```bash
-   ~/idhs/extraction.sh "<QUERY>" "RAFM_TopUpsJanApr"
+   ~/idhs/extraction.sh "<QUERY>" "RAFM_TopUpsJanApr_vou"
    ```
 
-8. **File Retrieval** <br>
+8. Convert it into a tab delimiter
+```sql
+cat RAFM_TopUpsJanApr_vou.txt | tr '|' '\t' > RAFM_TopUpsJanApr_vou.txt
+```
+
+9.. **File Retrieval** <br>
    After the extraction completes:
 
    * Located the output file (tab-delimited `.text` file) in the target directory
